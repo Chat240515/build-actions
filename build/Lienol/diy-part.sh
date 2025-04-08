@@ -80,7 +80,7 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
 sed -i 's/"网络存储"/"网络共享"/g' `egrep "网络存储" -rl ./`
 sed -i 's/"实时流量监测"/"流量"/g' `egrep "实时流量监测" -rl ./`
-sed -i 's/"KMS 服务器"/"KMS激活"/g' `egrep "KMS 服务器" -rl ./`
+sed -i 's/"Vlmcsd KMS 服务器"/"KMS激活"/g' `egrep "Vlmcsd KMS 服务器" -rl ./`
 sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -rl ./`
 sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"密码"/g' `egrep "管理权" -rl ./`
