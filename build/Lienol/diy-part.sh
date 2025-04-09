@@ -71,7 +71,7 @@ export kernel_usage="stable"
 # sed -i '1i src-git immortalwrt https://github.com/immortalwrt/luci' feeds.conf.default
 sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
-echo 'src-git vlmcsd https://github.com/Chat240515/op' >>feeds.conf.default
+git clone https://github.com/Chat240515/op package/op
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git passwallpackages https://github.com/xiaorouji/openwrt-passwall-packages;main' >>feeds.conf.default
 
@@ -81,7 +81,8 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
 sed -i 's/"网络存储"/"网络共享"/g' `egrep "网络存储" -rl ./`
 sed -i 's/"实时流量监测"/"流量"/g' `egrep "实时流量监测" -rl ./`
-sed -i 's/Vlmcsd KMS 服务器/KMS激活/g' feeds/luci/applications/luci-app-vlmcsd/po/zh_Hans/vlmcsd.po
+sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' package/op/luci-app-vlmcsd/Makefile
+sed -i 's/Vlmcsd KMS 服务器/KMS激活/g' package/op/luci-app-vlmcsd/po/zh_Hans/vlmcsd.po
 sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -rl ./`
 sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"密码"/g' `egrep "管理权" -rl ./`
