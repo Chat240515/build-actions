@@ -68,8 +68,9 @@ export kernel_usage="stable"
 
 
 # 添加软件包
-sed -i '1i src-git immortalwrt https://github.com/immortalwrt/luci' feeds.conf.default
+# sed -i '1i src-git immortalwrt https://github.com/immortalwrt/luci' feeds.conf.default
 sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+git clone https://github.com/Chat240515/luciapp package/luci-app-vlmcsd
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git passwallpackages https://github.com/xiaorouji/openwrt-passwall-packages;main' >>feeds.conf.default
