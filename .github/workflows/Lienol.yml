@@ -73,7 +73,7 @@ on:
       UPDATE_FIRMWARE_ONLINE:
         description: '在线更新固件功能'
         required: true
-        default: 'true'
+        default: 'false'
         type: boolean
 
 
